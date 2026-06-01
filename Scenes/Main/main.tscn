@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxsdjn66d7tvv"]
+
+[ext_resource type="PackedScene" uid="uid://ccjuf2t0t2ssc" path="res://Scenes/Player/player.tscn" id="1_abcde"]
+[ext_resource type="Script" uid="uid://dqyo6jbp6bifc" path="res://Scenes/Main/main.gd" id="2_fghij"]
+[ext_resource type="PackedScene" uid="uid://dhe5a8x5g0qj2" path="res://Scenes/UI/TouchControls.tscn" id="3_lmnop"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
+size = Vector3(60, 1, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+size = Vector3(60, 1, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_color = Color(0.36144468, 0.61858404, 0.83284944, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="main" type="Node" unique_id=1608847539]
+script = ExtResource("2_fghij")
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1699252821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83820283, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=284144128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37716866, 0)
+shape = SubResource("BoxShape3D_7dm0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=2082456045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99736977, -0.33540487, -0.21544552)
+mesh = SubResource("BoxMesh_ig7tw")
+
+[node name="Player" parent="." unique_id=5730307 instance=ExtResource("1_abcde")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.663238, 0)
+collision_mask = 6
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1388238210]
+transform = Transform3D(0.99096525, 0.08929258, -0.10007366, -0.01666537, 0.82235307, 0.56873345, 0.13307956, -0.5619273, 0.81641144, 0, 2.598305, 7.806107)
+
+[node name="Block" type="StaticBody3D" parent="." unique_id=1037987835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9813843, 14.87392)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block" unique_id=965084621]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block" unique_id=1065306242]
+mesh = SubResource("BoxMesh_h2yge")
+
+[node name="Block2" type="StaticBody3D" parent="." unique_id=1504436052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16544, 1.4849849, 14.87392)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block2" unique_id=1936959908]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block2" unique_id=1824914413]
+mesh = SubResource("BoxMesh_h2yge")
+
+[node name="Block3" type="StaticBody3D" parent="." unique_id=1968211417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16544, 2.1486938, 13.663555)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block3" unique_id=510407344]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block3" unique_id=1476582357]
+mesh = SubResource("BoxMesh_h2yge")
+
+[node name="TouchControls" parent="." instance=ExtResource("3_lmnop")]
