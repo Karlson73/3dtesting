@@ -11,14 +11,21 @@ config_version=5
 [application]
 
 config/name="3Dtest"
-run/main_scene="uid://bxsdjn66d7tvv"
+run/main_scene="res://Scenes/Boot/boot.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+GameManager="*res://Autoloads/GameManager.gd"
+AudioManager="*res://Autoloads/AudioManager.gd"
+SceneLoader="*res://Autoloads/SceneLoader.gd"
+SettingsManager="*res://Autoloads/SettingsManager.gd"
+
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=1400
+window/size/viewport_height=800
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

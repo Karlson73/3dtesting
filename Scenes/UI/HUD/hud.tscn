@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c7bb4gtid0age"]
+
+[ext_resource type="Script" path="res://Scenes/UI/HUD/hud.gd" id="1_hud"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopBar" type="HBoxContainer" parent="Control"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_constants/separation = 16
+
+[node name="ScoreLabel" type="Label" parent="Control/TopBar"]
+custom_minimum_size = Vector2(200, 40)
+text = "Score: 0"
+vertical_alignment = 1
+
+[node name="FpsLabel" type="Label" parent="Control/TopBar"]
+custom_minimum_size = Vector2(120, 40)
+text = "FPS: 0"
+vertical_alignment = 1
+size_flags_horizontal = 8
+
+[node name="PauseButton" type="Button" parent="Control/TopBar"]
+custom_minimum_size = Vector2(120, 40)
+text = "Pause"
+size_flags_horizontal = 8

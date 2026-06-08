@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhe5a8x5g0qj2"]
+
+[ext_resource type="Script" path="res://Scenes/UI/TouchControls/touch_controls.gd" id="1_abcde"]
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 24.0
+
+[node name="TouchControls" type="CanvasLayer"]
+script = ExtResource("1_abcde")
+
+[node name="Up" type="TouchScreenButton" parent="."]
+shape = SubResource("1")
+passby_press = true
+
+[node name="Arrow" type="Polygon2D" parent="Up"]
+color = Color(1, 1, 1, 0.5)
+polygon = PackedVector2Array(0, -24, -14, 0, 14, 0)
+
+[node name="Down" type="TouchScreenButton" parent="."]
+shape = SubResource("1")
+passby_press = true
+
+[node name="Arrow" type="Polygon2D" parent="Down"]
+color = Color(1, 1, 1, 0.5)
+polygon = PackedVector2Array(0, 24, -14, 0, 14, 0)
+
+[node name="Left" type="TouchScreenButton" parent="."]
+shape = SubResource("1")
+passby_press = true
+
+[node name="Arrow" type="Polygon2D" parent="Left"]
+color = Color(1, 1, 1, 0.5)
+polygon = PackedVector2Array(-24, 0, 0, -14, 0, 14)
+
+[node name="Right" type="TouchScreenButton" parent="."]
+shape = SubResource("1")
+passby_press = true
+
+[node name="Arrow" type="Polygon2D" parent="Right"]
+color = Color(1, 1, 1, 0.5)
+polygon = PackedVector2Array(24, 0, 0, -14, 0, 14)
+
+[node name="Jump" type="TouchScreenButton" parent="."]
+shape = SubResource("1")
+passby_press = true
+
+[node name="Visual" type="Polygon2D" parent="Jump"]
+color = Color(1, 1, 1, 0.25)
+polygon = PackedVector2Array(0, -24, 17, -17, 24, 0, 17, 17, 0, 24, -17, 17, -24, 0, -17, -17)

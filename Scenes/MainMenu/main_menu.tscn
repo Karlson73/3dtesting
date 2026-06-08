@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://bmainmenu0001"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu/main_menu.gd" id="1_mainmenu"]
+
+[node name="MainMenu" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mainmenu")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.13, 0.18, 1)
+
+[node name="MainPanel" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -160.0
+offset_right = 150.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="MainPanel"]
+custom_minimum_size = Vector2(300, 64)
+text = "3D Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 48
+
+[node name="Spacer" type="Control" parent="MainPanel"]
+custom_minimum_size = Vector2(0, 24)
+
+[node name="StartButton" type="Button" parent="MainPanel"]
+custom_minimum_size = Vector2(300, 56)
+text = "Start"
+
+[node name="SettingsButton" type="Button" parent="MainPanel"]
+custom_minimum_size = Vector2(300, 56)
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="MainPanel"]
+custom_minimum_size = Vector2(300, 56)
+text = "Quit"
+
+[node name="SettingsPanel" type="Control" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimBackground" type="ColorRect" parent="SettingsPanel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+mouse_filter = 0
+
+[node name="SettingsBox" type="PanelContainer" parent="SettingsPanel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -200.0
+offset_right = 260.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="SettingsPanel/SettingsBox"]
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="SettingsPanel/SettingsBox/VBox"]
+custom_minimum_size = Vector2(0, 48)
+text = "Settings"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 32
+
+[node name="Spacer1" type="Control" parent="SettingsPanel/SettingsBox/VBox"]
+custom_minimum_size = Vector2(0, 8)
+
+[node name="MusicRow" type="HBoxContainer" parent="SettingsPanel/SettingsBox/VBox"]
+custom_minimum_size = Vector2(0, 40)
+theme_override_constants/separation = 16
+
+[node name="MusicLabel" type="Label" parent="SettingsPanel/SettingsBox/VBox/MusicRow"]
+custom_minimum_size = Vector2(120, 0)
+text = "Music"
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel/SettingsBox/VBox/MusicRow"]
+custom_minimum_size = Vector2(280, 0)
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+value = 100.0
+size_flags_horizontal = 3
+
+[node name="MusicValueLabel" type="Label" parent="SettingsPanel/SettingsBox/VBox/MusicRow"]
+custom_minimum_size = Vector2(60, 0)
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SfxRow" type="HBoxContainer" parent="SettingsPanel/SettingsBox/VBox"]
+custom_minimum_size = Vector2(0, 40)
+theme_override_constants/separation = 16
+
+[node name="SfxLabel" type="Label" parent="SettingsPanel/SettingsBox/VBox/SfxRow"]
+custom_minimum_size = Vector2(120, 0)
+text = "SFX"
+vertical_alignment = 1
+
+[node name="SfxSlider" type="HSlider" parent="SettingsPanel/SettingsBox/VBox/SfxRow"]
+custom_minimum_size = Vector2(280, 0)
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+value = 100.0
+size_flags_horizontal = 3
+
+[node name="SfxValueLabel" type="Label" parent="SettingsPanel/SettingsBox/VBox/SfxRow"]
+custom_minimum_size = Vector2(60, 0)
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="SettingsPanel/SettingsBox/VBox"]
+custom_minimum_size = Vector2(0, 16)
+size_flags_vertical = 3
+
+[node name="BackButton" type="Button" parent="SettingsPanel/SettingsBox/VBox"]
+custom_minimum_size = Vector2(0, 48)
+text = "Back"
