@@ -68,19 +68,34 @@ UNITY
 ĐIỂM MẠNH
 1. Điểm mạnh chung của Unity cho mobile
 -Đa nền tảng: 1 project có thể build ra ngây cho nhiều nền tảng (Android, iOS, Windows,...)
+
 -Asset store khổng lồ: vì là 1 trong những engine lâu đời và có tiếng nên kho asset của chính Unity nhỉn hơn nhiều so với các engine hiện tại.
+
+
 -Cộng đồng lớn mạnh: một phần không nhỏ đóng góp cho kho asset khổng lồ của Unity là nhờ cộng đồng rất lớn của bản thân Unity
+
 -Profilling và tối ưu: Unity Profiler, Frame Debugger, Memory Profiler giúp kiểm tra performance và tối ưu game.
 
 2. Điểm mạnh 2D (trên Android)
 -Cinemachine: camera 2D/2.5D thông minh hỗ trợ nhiều hiệu ứng tự động.
+
 -Animation và Animator: hệ thống animation mạnh, dễ quản lý và tùy chỉnh các yêu cầu phức tạp về animation thay vì dùng script.
+
 -Particle System: hỗ trợ tạo hiệu ứng particle dễ dàng. 
 
 3. Điểm mạnh 3D (trên Android)
 -URP: hỗ trợ tạo hiệu ứng 3D linh hơn, tối ưu cho mobile.
--AV/VR: hỗ trợ AV core,ARkit, Oculus SDK,XR toolkits
--
+
+-AV/VR: hỗ trợ AV core, ARkit, Oculus SDK,XR toolkits
+
+-Lighning và GI: hỗ trợ baked lightmap, mixed lighting, SSAO, SS reflections.
+
+ĐIỂM YẾU
+1. Kích thước build lớn hơn so với Godot đòi hỏi phải tối ưu để giảm APK/OBB size.
+
+2. Tùy biến engine: Godot là open source, dễ tùy chỉnh engine, phù hợp dự án indie và doanh nghiệp muốn kiểm soát toàn bộ pipeline trong khi đó Unity là closed source khiến cho việc tùy biến trở nên khó khăn.
+
+3. Tài nguyên hệ thống: Unity tiêu tốn nhiều RAM và CPU trên các thiết bị nhiều hơn so với godot đặc biệt là các dự án 3D.
 
 KẾT LUẬN
 -GODOT phù hợp với các dự án 2D và 3D trên Android nhưng với điều kiện là các dự án 3D cần phải là các project nhỏ ko quá đòi hỏi về mặt đồ họa để đảm bảo khả năng tương thích với nhiều thiết bị android.
